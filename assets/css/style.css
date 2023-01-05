@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
-    --primary-color: rgb(17, 86, 102);
-    --primary-color-darker: rgb(9, 48, 56);
-    --secondary-color: rgb(240, 247, 253);
+    --primary-color: #3DBFC1;
+    --primary-color-darker: #197477;
+    --secondary-color: #EFFBF7;
+    --text-color: #5B5C5E;
 }
 
 * {
@@ -14,17 +15,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-darker);
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
+    color: var(--text-color);
 }
 
 .container {
     max-width: 640px;
     margin: 50px auto;
     background-color: var(--secondary-color);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
 }
 
@@ -39,34 +41,62 @@ body {
     margin-bottom: 20px;
 }
 
-form input, form label, form button {
-    display: block;
+.input-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input, .input-box label, .button-box button {
+    display: block;
     margin-bottom: 10px;
 }
 
-form input {
+.input-box label {
+    padding: 0 5px;
+    position: absolute;
+    top: -18px;
+    left: 10px;
+    background-color: var(--secondary-color);
+}
+
+.input-box input {
+    width: 100%;
     font-size: 24px;
-    height: 50px;
-    padding: 0 20px;
+    padding: 14px 24px;
+    background-color: var(--secondary-color);
+    outline: 1px solid var(--primary-color-darker);
+    border: none;
 }
 
-form input:focus {
-    outline: 1px solid var(--primary-color);
+.input-box input:focus {
+    outline: 2px solid var(--primary-color);
+    background-color: #fff;
 }
 
-form button {
+.button-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-box button {
+    width: 200px;
+    padding: 5px 15px;
     border: none;
     background-color: var(--primary-color);
-    color:var(--secondary-color);
-    font-size: 18px;
+    color: var(--secondary-color);
+    font-size: 24px;
     font-weight: bold;
     height: 50px;
     cursor: pointer;
-    margin-top: 30px;
+    border-radius: 10px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-form button:hover {
+.button-box button:hover {
     background-color: var(--primary-color-darker);
 }
 
@@ -76,11 +106,13 @@ form button:hover {
 }
 
 .positivo {
-    background-color: rgb(0, 255, 195);
-    border: 1px solid rgb(0, 94, 72);
+    background-color: rgb(151, 252, 228);
+    border: 1px solid rgb(0, 60, 46);
+    color: rgb(0, 60, 46);
 }
 
 .negativo {
-    background-color: rgb(255, 127, 150);
-    border: 1px solid rgb(114, 6, 26);
+    background-color: rgb(255, 190, 202);
+    border: 1px solid rgb(77, 0, 14);
+    color: rgb(77, 0, 14);
 }

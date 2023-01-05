@@ -17,9 +17,9 @@ function printMensagem(msg, tipo) {
 
 function verificaCampos(peso, altura) {
     if (!peso || peso === 0) {
-        return { msg: "Peso inválido", tipo: false };
+        return { msg: "Peso inválido. Utilize '.' (ponto) ao invés de ',' (vírgula) para casas decimais.", tipo: false };
     } else if (!altura || altura === 0) {
-        return { msg: "Altura inválida", tipo: false };
+        return { msg: "Altura inválida. Utilize '.' (ponto) ao invés de ',' (vírgula) para casas decimais.", tipo: false };
     } else if (peso <= altura) {
         return { msg: "Campos inválidos", tipo: false };
     } else {
@@ -61,6 +61,8 @@ function main() {
         } else {
             printMensagem(camposIsValid.msg, camposIsValid.tipo);
         }
+
+        campoMensagem.scrollIntoView();
     });
 }
 
