@@ -34,6 +34,10 @@ body {
     text-align: justify;
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 .duas-colunas {
     display: grid;
     grid-template-columns: 50% 50%;
